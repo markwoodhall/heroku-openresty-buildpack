@@ -3,6 +3,9 @@
 set -euo pipefail
 OLD_PATH="$PATH"
 
+apt update --yes
+apt install libpcre3 libpcre3-dev --yes
+
 BUILD_DIR="$1"
 CACHE_DIR="$2"
 ENV_DIR="$3"
