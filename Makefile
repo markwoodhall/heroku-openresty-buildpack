@@ -1,4 +1,4 @@
-OPENRESTY_VERSION ?= 1.19.9.1
+OPENRESTY_VERSION ?= 1.27.1.1
 LUAROCKS_VERSION ?= 3.7.0
 
 build: build-heroku-18 build-heroku-20 build-heroku-24

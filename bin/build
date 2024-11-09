@@ -5,9 +5,6 @@
 # at https://devcenter.heroku.com/articles/stack
 set -euo pipefail
 
-apt update --yes
-apt install libpcre3-dev libssl-dev perl make build-essential curl --yes
-
 OPENRESTY_SOURCE_URL="https://openresty.org/download/openresty-${OPENRESTY_VERSION}.tar.gz"
 LUAROCKS_SOURCE_URL="https://github.com/luarocks/luarocks/archive/v${LUAROCKS_VERSION}.tar.gz"
 
