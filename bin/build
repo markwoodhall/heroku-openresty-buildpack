@@ -5,9 +5,6 @@
 # at https://devcenter.heroku.com/articles/stack
 set -euo pipefail
 
-apt update --yes
-apt install libpcre3 libpcre3-dev --yes
-
 OPENRESTY_SOURCE_URL="https://openresty.org/download/openresty-${OPENRESTY_VERSION}.tar.gz"
 LUAROCKS_SOURCE_URL="https://github.com/luarocks/luarocks/archive/v${LUAROCKS_VERSION}.tar.gz"
 
@@ -21,10 +18,9 @@ curl -sSfL "$LUAROCKS_SOURCE_URL" | tar zx -C "$TEMP_DIR"
 cd "$TEMP_DIR/openresty-${OPENRESTY_VERSION}"
 ./configure \
   -j8 \
-  --with-pcre-jit \
+  --without-http_rewrite_module \
   --with-http_realip_module \
   --with-http_ssl_module \
-  --with-http_postgres_module \
   --prefix="$INSTALL_DIR"
 make install
 
