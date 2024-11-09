@@ -7,7 +7,7 @@ BUILD_DIR="$1"
 CACHE_DIR="$2"
 ENV_DIR="$3"
 
-#export LD_LIBRARY_PATH=/app/.apt/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/app/.apt/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 echo "-----> Installing OpenResty ..."
 tar -zxf "dist/openresty-$STACK".tar.gz -C "$BUILD_DIR"
