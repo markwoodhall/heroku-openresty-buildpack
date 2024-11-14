@@ -8,6 +8,8 @@ SOURCE_NGINX_CONF="$NGINX_CONF_DIR/nginx.conf.default"
 DEST_NGINX_CONF="$NGINX_CONF_DIR/nginx.conf"
 LUA_PACKAGE_PATH="$HOME/?.lua;$HOME/?/init.lua"
 
+mkdir -p "$HOME/logs"
+
 # If there's an nginx.conf in the root of the project directory
 # then it will be used instead of the default nginx.conf
 if [[ -f "$HOME/nginx.conf" ]]; then
